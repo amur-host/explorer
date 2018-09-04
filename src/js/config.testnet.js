@@ -2,26 +2,26 @@
     'use strict';
 
     angular.module('web').constant('appConfig', {
-        apiDomain: 'https://pool.testnet.wavesnodes.com',
-        dataServiceBaseUrl: 'https://api.testnet.wavesplatform.com/v0',
-        title: 'Waves Testnet Explorer',
+        apiDomain: 'https://pool.testnet.amur.host',
+        dataServiceBaseUrl: 'https://api.testnet.amur.host/v0',
+        title: 'Amur Testnet Explorer',
         blockchainName: 'Testnet',
         nodes: [
-            {url: 'https://testnode1.wavesnodes.com', maintainer: 'Waves', showAsLink: true},
-            {url: 'https://testnode2.wavesnodes.com', maintainer: 'Waves', showAsLink: true},
-            {url: 'https://testnode3.wavesnodes.com', maintainer: 'Waves', showAsLink: true},
-            {url: 'https://testnode4.wavesnodes.com', maintainer: 'Waves', showAsLink: true}
+            {url: 'https://testnode1.amur.host', maintainer: 'Amur', showAsLink: true},
+            {url: 'https://testnode2.amur.host', maintainer: 'Amur', showAsLink: true},
+            {url: 'https://testnode3.amur.host', maintainer: 'Amur', showAsLink: true},
+            {url: 'https://testnode4.amur.host', maintainer: 'Amur', showAsLink: true}
         ],
         faucet: {
-            url: 'https://testnode1.wavesnodes.com/faucet',
+            url: 'https://testnode1.amur.host/faucet',
             captchaKey: '6Le9hSgUAAAAAAtIe04SrgDy23PsBZOazfb-li66'
         },
         peerExplorer: {
-            url: 'https://wavesexplorer.com',
+            url: 'https://amur.host',
             title: 'MAINNET Explorer'
         },
         wallet: {
-            url: 'https://testnet.waveswallet.io',
+            url: 'https://testnet.amurwallet.io',
             title: 'Wallet'
         }
     });

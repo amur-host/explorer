@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    function WavesCopyButtonController() {
+    function AmurCopyButtonController() {
         var ctrl = this;
 
         ctrl.$onInit = function () {
@@ -10,8 +10,8 @@
 
     angular
         .module('web')
-        .component('wavesCopyButton', {
-            controller: WavesCopyButtonController,
+        .component('amurCopyButton', {
+            controller: AmurCopyButtonController,
             bindings: {
                 text: '<?'
             },

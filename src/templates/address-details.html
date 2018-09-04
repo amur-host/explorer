@@ -1,4 +1,4 @@
-<waves-page-header title="Address" subtitle="ctrl.address"></waves-page-header>
+<amur-page-header title="Address" subtitle="ctrl.address"></amur-page-header>
 <div class="row">
     <div class="col-lg-12">
         <div class="profile-user-info profile-user-info-striped">
@@ -45,12 +45,12 @@
                     </thead>
                     <tbody>
                     <tr ng-repeat="item in ctrl.txs | orderBy:'timestamp':true">
-                        <td><waves-transaction-ref tx-id="item.id" max-length="7"></waves-transaction-ref></td>
+                        <td><amur-transaction-ref tx-id="item.id" max-length="7"></amur-transaction-ref></td>
                         <td>{{item.type|txtype}}</td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|amurdate}}</td>
 
                         <td ng-if="item.sender!==ctrl.address">
-                            <waves-endpoint-ref endpoint="item.sender" max-length="16"></waves-endpoint-ref>
+                            <amur-endpoint-ref endpoint="item.sender" max-length="16"></amur-endpoint-ref>
                         </td>
                         <td ng-if="item.sender===ctrl.address">
                             <span class="mono">{{item.sender|limitTo:16}}&hellip;</span></td>
@@ -61,7 +61,7 @@
                                   ng-class="{'text-danger':item.outgoing,'text-success':!item.outgoing}"></span>
                         </td>
                         <td ng-if="item.recipient!==ctrl.address">
-                            <waves-endpoint-ref endpoint="item.recipient" max-length="16"></waves-endpoint-ref>
+                            <amur-endpoint-ref endpoint="item.recipient" max-length="16"></amur-endpoint-ref>
                         </td>
                         <td ng-if="item.recipient===ctrl.address">
                             <span class="mono">{{item.recipient|limitTo:16}}&hellip;</span>
@@ -100,7 +100,7 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="item in ctrl.assets">
-                            <td><waves-transaction-ref tx-id="item.id"></waves-transaction-ref></td>
+                            <td><amur-transaction-ref tx-id="item.id"></amur-transaction-ref></td>
                             <td>{{item.name}}</td>
                             <td>{{item.balance|assetunits:item.decimals}}</td>
                         </tr>
@@ -119,9 +119,9 @@
                     </thead>
                     <tbody>
                     <tr ng-repeat="item in ctrl.dataArray">
-                        <td><waves-data-key text="item.key"></waves-data-key></td>
+                        <td><amur-data-key text="item.key"></amur-data-key></td>
                         <td>{{item.type}}</td>
-                        <td><waves-data-value text="item.value"></waves-data-value></td>
+                        <td><amur-data-value text="item.value"></amur-data-value></td>
                     </tr>
                     </tbody>
                 </table>
@@ -138,11 +138,11 @@
                     <tbody ng-repeat="item in ctrl.scripts">
                         <tr>
                             <td>Compiled Script</td>
-                            <td><waves-compiled-script text="item.script"></waves-compiled-script></td>
+                            <td><amur-compiled-script text="item.script"></amur-compiled-script></td>
                         </tr>
                         <tr>
                             <td>Script Text</td>
-                            <td><waves-script text="item.scriptText"></waves-script></td>
+                            <td><amur-script text="item.scriptText"></amur-script></td>
                         </tr>
                     </tbody>
                 </table>

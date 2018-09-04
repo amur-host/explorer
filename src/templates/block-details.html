@@ -1,4 +1,4 @@
-<waves-page-header title="Block" subtitle="ctrl.height.toString()"></waves-page-header>
+<amur-page-header title="Block" subtitle="ctrl.height.toString()"></amur-page-header>
 <div class="row">
     <div class="col-lg-12">
         <div class="profile-user-info profile-user-info-striped">
@@ -13,7 +13,7 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Timestamp</div>
-                <div class="profile-info-value">{{ctrl.details.timestamp|wavesdate}}</div>
+                <div class="profile-info-value">{{ctrl.details.timestamp|amurdate}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Transactions</div>
@@ -25,7 +25,7 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Generator</div>
-                <div class="profile-info-value"><waves-endpoint-ref endpoint="ctrl.details.generator"></waves-endpoint-ref></div>
+                <div class="profile-info-value"><amur-endpoint-ref endpoint="ctrl.details.generator"></amur-endpoint-ref></div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Signature</div>
@@ -42,7 +42,7 @@
         </div>
         <h2 class="header smaller blue">Transactions</h2>
 
-        <waves-transaction-table title="Payments [type = 2]" ng-show="ctrl.payments.length > 0">
+        <amur-transaction-table title="Payments [type = 2]" ng-show="ctrl.payments.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -57,19 +57,19 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.payments">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
                     <td>{{item.extras.fee}}</td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref></td>
-                    <td><waves-endpoint-ref endpoint="item.recipient" max-length="12"></waves-endpoint-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender" max-length="12"></amur-endpoint-ref></td>
+                    <td><amur-endpoint-ref endpoint="item.recipient" max-length="12"></amur-endpoint-ref></td>
                     <td><span class="pull-right">{{item.extras.amount.amount}}</span></td>
                     <td><span class="pull-right">{{item.extras.amount.currency}}</span></td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Asset Issue [type = 3]" ng-show="ctrl.assetIssue.length > 0">
+        <amur-transaction-table title="Asset Issue [type = 3]" ng-show="ctrl.assetIssue.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -84,19 +84,19 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.assetIssue">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
                     <td>{{item.extras.fee}}</td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref></td>
-                    <td><waves-transaction-ref tx-id="item.assetId" max-length="12"></waves-transaction-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender" max-length="12"></amur-endpoint-ref></td>
+                    <td><amur-transaction-ref tx-id="item.assetId" max-length="12"></amur-transaction-ref></td>
                     <td>{{item.name}}</td>
                     <td><span class="pull-right">{{item.extras.amount.amount}}</span></td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Asset Reissue [type = 5]" ng-show="ctrl.assetReissue.length > 0">
+        <amur-transaction-table title="Asset Reissue [type = 5]" ng-show="ctrl.assetReissue.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -110,18 +110,18 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.assetReissue">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
                     <td>{{item.extras.fee}}</td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref></td>
-                    <td><waves-transaction-ref tx-id="item.assetId" max-length="12"></waves-transaction-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender" max-length="12"></amur-endpoint-ref></td>
+                    <td><amur-transaction-ref tx-id="item.assetId" max-length="12"></amur-transaction-ref></td>
                     <td><span class="pull-right">{{item.extras.amount.amount}}</span></td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Transfers [type = 4]" ng-show="ctrl.assetTransfer.length > 0">
+        <amur-transaction-table title="Transfers [type = 4]" ng-show="ctrl.assetTransfer.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -136,22 +136,22 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.assetTransfer">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
                     <td>{{item.extras.fee}}</td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref></td>
-                    <td><waves-endpoint-ref endpoint="item.recipient" max-length="12"></waves-endpoint-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender" max-length="12"></amur-endpoint-ref></td>
+                    <td><amur-endpoint-ref endpoint="item.recipient" max-length="12"></amur-endpoint-ref></td>
                     <td>{{item.extras.amount.amount}}</td>
                     <td ng-if="item.assetId === null">{{item.extras.amount.currency}}</td>
                     <td ng-if="item.assetId !== null">
-                        <waves-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency"></waves-transaction-ref>
+                        <amur-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency"></amur-transaction-ref>
                     </td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Asset Burn [type = 6]" ng-show="ctrl.assetBurn.length > 0">
+        <amur-transaction-table title="Asset Burn [type = 6]" ng-show="ctrl.assetBurn.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -165,18 +165,18 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.assetBurn">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
                     <td>{{item.extras.fee}}</td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref></td>
-                    <td><waves-asset-ref asset-id="item.assetId" text="item.extras.amount.currency"></waves-asset-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender" max-length="12"></amur-endpoint-ref></td>
+                    <td><amur-asset-ref asset-id="item.assetId" text="item.extras.amount.currency"></amur-asset-ref></td>
                     <td><span class="pull-right">{{item.extras.amount.amount}}</span></td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Exchanges [type = 7]" ng-show="ctrl.exchange.length > 0">
+        <amur-transaction-table title="Exchanges [type = 7]" ng-show="ctrl.exchange.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -192,25 +192,25 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.exchange">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
-                    <td>{{item.timestamp|wavesdate}}</td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
                     <td>{{item.extras.price}}</td>
                     <td>{{item.extras.amount.amount}}</td>
                     <td>{{item.extras.total.amount}}</td>
                     <td>
                         <nobr>
-                            <waves-asset-ref asset-id="item.order1.assetPair.amountAsset" text="item.extras.amount.currency"></waves-asset-ref> /
-                            <waves-asset-ref asset-id="item.order1.assetPair.priceAsset" text="item.extras.priceCurrency"></waves-asset-ref>
+                            <amur-asset-ref asset-id="item.order1.assetPair.amountAsset" text="item.extras.amount.currency"></amur-asset-ref> /
+                            <amur-asset-ref asset-id="item.order1.assetPair.priceAsset" text="item.extras.priceCurrency"></amur-asset-ref>
                         </nobr>
                     </td>
-                    <td><waves-endpoint-ref endpoint="item.extras.from" max-length="12"></waves-endpoint-ref></td>
-                    <td><waves-endpoint-ref endpoint="item.extras.to" max-length="12"></waves-endpoint-ref></td>
+                    <td><amur-endpoint-ref endpoint="item.extras.from" max-length="12"></amur-endpoint-ref></td>
+                    <td><amur-endpoint-ref endpoint="item.extras.to" max-length="12"></amur-endpoint-ref></td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Leasing [type = 8]" ng-show="ctrl.leasing.length > 0">
+        <amur-transaction-table title="Leasing [type = 8]" ng-show="ctrl.leasing.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -224,18 +224,18 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.leasing">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
                     <td>{{item.extras.fee}}</td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref></td>
-                    <td><waves-endpoint-ref endpoint="item.recipient" max-length="12"></waves-endpoint-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender" max-length="12"></amur-endpoint-ref></td>
+                    <td><amur-endpoint-ref endpoint="item.recipient" max-length="12"></amur-endpoint-ref></td>
                     <td>{{item.extras.amount.amount}}</td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Cancel leasing [type = 9]" ng-show="ctrl.leasingCancel.length > 0">
+        <amur-transaction-table title="Cancel leasing [type = 9]" ng-show="ctrl.leasingCancel.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -248,17 +248,17 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.leasingCancel">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
                     <td>{{item.extras.fee}}</td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender"></waves-endpoint-ref></td>
-                    <td><waves-transaction-ref tx-id="item.leaseId"></waves-transaction-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender"></amur-endpoint-ref></td>
+                    <td><amur-transaction-ref tx-id="item.leaseId"></amur-transaction-ref></td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Aliases [type = 10]" ng-show="ctrl.alias.length > 0">
+        <amur-transaction-table title="Aliases [type = 10]" ng-show="ctrl.alias.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -271,17 +271,17 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.alias">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
                     <td>{{item.extras.fee}}</td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender" max-length="12"></amur-endpoint-ref></td>
                     <td>{{item.alias}}</td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Mass payments [type = 11]" ng-show="ctrl.massPayment.length > 0">
+        <amur-transaction-table title="Mass payments [type = 11]" ng-show="ctrl.massPayment.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -296,12 +296,12 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.massPayment">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender"></waves-endpoint-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender"></amur-endpoint-ref></td>
                     <td ng-if="item.assetId === null">{{item.extras.amount.currency}}</td>
                     <td ng-if="item.assetId !== null">
-                        <waves-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency"></waves-transaction-ref>
+                        <amur-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency"></amur-transaction-ref>
                     </td>
                     <td>{{item.extras.amount.amount}}</td>
                     <td>{{item.transferCount}}</td>
@@ -309,9 +309,9 @@
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Data [type = 12]" ng-show="ctrl.dataTransactions.length > 0">
+        <amur-transaction-table title="Data [type = 12]" ng-show="ctrl.dataTransactions.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -324,17 +324,17 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.dataTransactions">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender"></waves-endpoint-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender"></amur-endpoint-ref></td>
                     <td>{{item.data.length}}</td>
                     <td>{{item.extras.fee}}</td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Script [type = 13]" ng-show="ctrl.scripts.length > 0">
+        <amur-transaction-table title="Script [type = 13]" ng-show="ctrl.scripts.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -347,17 +347,17 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.scripts">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender"></waves-endpoint-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender"></amur-endpoint-ref></td>
                     <td>{{item.extras.fee}}</td>
-                    <td><waves-compiled-script text="item.script" max-length="12"></waves-compiled-script></td>
+                    <td><amur-compiled-script text="item.script" max-length="12"></amur-compiled-script></td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
 
-        <waves-transaction-table title="Fee sponsorship [type = 14]" ng-show="ctrl.sponsorships.length > 0">
+        <amur-transaction-table title="Fee sponsorship [type = 14]" ng-show="ctrl.sponsorships.length > 0">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -370,14 +370,14 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in ctrl.sponsorships">
-                    <td><waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref></td>
-                    <td>{{item.timestamp|wavesdate}}</td>
-                    <td><waves-endpoint-ref endpoint="item.sender"></waves-endpoint-ref></td>
+                    <td><amur-transaction-ref tx-id="item.id" max-length="12"></amur-transaction-ref></td>
+                    <td>{{item.timestamp|amurdate}}</td>
+                    <td><amur-endpoint-ref endpoint="item.sender"></amur-endpoint-ref></td>
                     <td>{{item.extras.amount.amount}} {{item.extras.amount.currency}}</td>
                     <td>{{item.extras.fee}}</td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </amur-transaction-table>
     </div>
 </div>

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    function WavesAssetRefController() {
+    function AmurAssetRefController() {
         var ctrl = this;
 
         ctrl.$onInit = function () {
@@ -17,14 +17,14 @@
 
     angular
         .module('web')
-        .component('wavesAssetRef', {
-            controller: WavesAssetRefController,
+        .component('amurAssetRef', {
+            controller: AmurAssetRefController,
             bindings: {
                 assetId: '<',
                 maxLength: '<?',
                 text: '<?'
             },
             template: '<span ng-if="$ctrl.assetId === null">AMUR</span>' +
-                '<waves-transaction-ref ng-if="$ctrl.assetId !== null" tx-id="$ctrl.assetId" text="$ctrl.text"></waves-transaction-ref>'
+                '<amur-transaction-ref ng-if="$ctrl.assetId !== null" tx-id="$ctrl.assetId" text="$ctrl.text"></amur-transaction-ref>'
         });
 })();

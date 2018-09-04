@@ -3,7 +3,7 @@
 
     angular
         .module('web')
-        .component('wavesNodeLink', {
+        .component('amurNodeLink', {
             bindings: {
                 ref: '<'
             },

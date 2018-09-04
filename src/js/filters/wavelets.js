@@ -4,8 +4,8 @@
     angular.module('web').filter('wavelets', function() {
         return function(input) {
             if (input == null) return null;
-            var waves = input / 100000000;
-            var str = addCommas(waves.toFixed(8));
+            var amur = input / 100000000;
+            var str = addCommas(amur.toFixed(8));
 
             // remove trailing zeros
             var parts = str.split('.');

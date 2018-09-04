@@ -3,7 +3,7 @@
 
     var DEFAULT_MAX_LENGTH = 32;
 
-    function WavesDataKeyController() {
+    function AmurDataKeyController() {
         var ctrl = this;
 
         ctrl.$onInit = function () {
@@ -13,8 +13,8 @@
 
     angular
         .module('web')
-        .component('wavesDataKey', {
-            controller: WavesDataKeyController,
+        .component('amurDataKey', {
+            controller: AmurDataKeyController,
             bindings: {
                 maxLength: '<?',
                 text: '<?'

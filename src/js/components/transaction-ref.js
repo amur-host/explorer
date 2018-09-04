@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    function WavesTransactionRefController() {
+    function AmurTransactionRefController() {
         var ctrl = this;
 
         ctrl.$onInit = function () {
@@ -17,8 +17,8 @@
 
     angular
         .module('web')
-        .component('wavesTransactionRef', {
-            controller: WavesTransactionRefController,
+        .component('amurTransactionRef', {
+            controller: AmurTransactionRefController,
             bindings: {
                 txId: '<',
                 maxLength: '<?',

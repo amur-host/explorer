@@ -1,10 +1,10 @@
-# Waves Explorer Lite
+# Amur Explorer Lite
 
-Waves Testnet Blockchain Explorer
+Amur Testnet Blockchain Explorer
 
 # Demo
 
-Demo is available on http://testnet.wavesexplorer.com
+Demo is available on http://testnet.amur.host
 
 # Setup
 

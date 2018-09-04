@@ -3,7 +3,7 @@
 
     var DEFAULT_MAX_LENGTH = 100;
 
-    function WavesDataValueController() {
+    function AmurDataValueController() {
         var ctrl = this;
 
         ctrl.$onInit = function () {
@@ -13,13 +13,13 @@
 
     angular
         .module('web')
-        .component('wavesDataValue', {
-            controller: WavesDataValueController,
+        .component('amurDataValue', {
+            controller: AmurDataValueController,
             bindings: {
                 maxLength: '<?',
                 text: '<?'
             },
             template: '<span style="line-height: 30px">{{$ctrl.text|limitTo:$ctrl.maxLength}}{{$ctrl.text.length > $ctrl.maxLength ? "&hellip;" : ""}}</span>' +
-                '<waves-copy-button text="$ctrl.text"></waves-copy-button>'
+                '<amur-copy-button text="$ctrl.text"></amur-copy-button>'
         });
 })();

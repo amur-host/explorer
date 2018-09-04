@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    function WavesTransactionRawController() {
+    function AmurTransactionRawController() {
         var ctrl = this;
 
         ctrl.$onInit = function () {
@@ -17,8 +17,8 @@
 
     angular
         .module('web')
-        .component('wavesTransactionRaw', {
-            controller: WavesTransactionRawController,
+        .component('amurTransactionRaw', {
+            controller: AmurTransactionRawController,
             bindings: {
                 tx: '<'
             },

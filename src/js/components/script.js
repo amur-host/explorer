@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    function WavesScriptController() {
+    function AmurScriptController() {
         var ctrl = this;
 
         ctrl.$onInit = function () {
@@ -10,8 +10,8 @@
 
     angular
         .module('web')
-        .component('wavesScript', {
-            controller: WavesScriptController,
+        .component('amurScript', {
+            controller: AmurScriptController,
             bindings: {
                 maxLength: '<?',
                 text: '<?'
