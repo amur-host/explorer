@@ -4,7 +4,7 @@
   "description": "Amur blockchain information tool",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amurhost/explorer.git"
+    "url": "https://github.com/amur-host/explorer.git"
   },
   "license": "Apache-2.0",
   "dependencies": {
@@ -21,7 +21,7 @@
     "ngclipboard": "^2.0.0",
     "restangular": "^1.6.1",
     "underscore": "^1.8.3",
-    "amurhost-core-js": "git://github.com/amurhost/amurhost.core.js.git#master"
+    "amurhost-core-js": "git://github.com/amur-host/amurhost.core.js.git#master"
   },
   "devDependencies": {
     "del": "^3.0.0",
