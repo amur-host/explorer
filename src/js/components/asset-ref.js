@@ -24,7 +24,7 @@
                 maxLength: '<?',
                 text: '<?'
             },
-            template: '<span ng-if="$ctrl.assetId === null">WAVES</span>' +
+            template: '<span ng-if="$ctrl.assetId === null">AMUR</span>' +
                 '<waves-transaction-ref ng-if="$ctrl.assetId !== null" tx-id="$ctrl.assetId" text="$ctrl.text"></waves-transaction-ref>'
         });
 })();

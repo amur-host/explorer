@@ -53,7 +53,7 @@
 
         function postProcessPaymentTransaction(transaction) {
             processFee(transaction);
-            processAmount(transaction, transaction.amount, Currency.WAVES.id);
+            processAmount(transaction, transaction.amount, Currency.AMUR.id);
 
             return transaction;
         }
@@ -100,7 +100,7 @@
 
         function postProcessLeasingTransaction(transaction) {
             processFee(transaction);
-            processAmount(transaction, transaction.amount, Currency.WAVES.id);
+            processAmount(transaction, transaction.amount, Currency.AMUR.id);
 
             return transaction;
         }
@@ -178,7 +178,7 @@
         }
 
         function processAmount(transaction, rawAmount, assetId) {
-            var currency = Currency.WAVES;
+            var currency = Currency.AMUR;
             if (assetId) {
                 if (!Currency.isCached(assetId)) {
                     txToUpdate.push(transaction);
@@ -197,7 +197,7 @@
         }
 
         function processFee(transaction) {
-            var currency = Currency.WAVES;
+            var currency = Currency.AMUR;
             var assetId = transaction.feeAsset;
             if (assetId) {
                 if (!Currency.isCached(assetId)) {
